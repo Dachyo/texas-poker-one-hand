@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <title>Poker - Texas Hold 'em</title>
+    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Noto Sans", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="app.css" />
+    <script src="script.js" type="module"></script>
+  </head>
+
+  <body>
+    <button class="help-button" data-help-button>
+      <img class="help-icon" src="./images/help-circle.svg" alt="" />
+    </button>
+    <div id="help-modal" class="modal">
+      <div class="modal-content animate">
+        <span class="close" data-help-close> &times; </span>
+        <h3 class="modal-heading">Help</h3>
+        <div class="help-container">
+          <div class="instructions">
+            <p>
+              Этот вариант классического покера в стиле Техасского Холдема больше похож на игровой автомат казино. 
+              Вы будете играть против шансов получить лучшие руки. 
+              Геймплей прост и выглядит следующим образом:
+            </p>
+            <p>
+              Любой покер – это лучший из 5 карт. Независимо от того, сколько карт
+              в игре вы можете взять на руку только 5 карт. В Техасском Холдеме
+              На столе 5 карт и две у вас на руке. Каждый может
+              используйте карты на столе, но только вы можете использовать карты в своем
+              рук.
+            </p>
+            <ol>
+              <li>
+                Когда вы нажмете кнопку воспроизведения, из вашего кошелька будет списано 5 долларов.
+                игра начнется. Как только игра начнется, вы получите две карты.
+                рука. В каждом раунде вы можете добавить к своей ставке 5 долларов. Нажимать
+                Играйте, чтобы перейти к следующему шагу.
+              </li>
+              <li>
+                Следующий шаг переворачивает первые три карты на столе лицевой стороной вверх.
+                Поворот этих карт также называется «флоп». 
+                Если вам нравится ваши карты, вы можете продолжить и увеличивать свою ставку. 
+                Нажмите кнопку воспроизведения, чтобы перейти к следующему шагу.
+              </li>
+              <li>
+                Следующий шаг переворачивает четвертую карту на столе лицевой стороной вверх. 
+                Ее еще называют картой «терн» или «четвертой улицей». 
+                Если вам нравится то, что вы видите, вы можете продолжить увеличивать свою ставку. 
+                Нажмите кнопку воспроизведения, чтобы перейти к следующему шагу.
+              </li>
+              <li>
+                Следующий шаг переворачивает пятую карту на столе лицевой стороной вверх. 
+                Ее еще называют картой «ривер» или «пятой улицей». 
+                На этом этапе игра определит для вас 5 лучших карт и выделит результаты. 
+                Вы получите выплату (или нет) в зависимости от полученной вами руки. 
+                Нажмите кнопку «Play», чтобы начать новую игру и продолжать накапливать фишки!
+              </li>
+            </ol>
+            <img
+              src="images/poker-hands.jpg"
+              alt="List of poker hands"
+              class="poker-hands-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="game">
+      <div class="top-text" data-instructions-text>
+        Hit "Play" to begin playing. Each game costs $5 in chips to start!
+      </div>
+      <div>
+        <div class="table">
+          <div class="card" data-table-card>
+            <div class="card-back card-face">
+              <img src="images/B.svg" alt="Card" />
+            </div>
+            <div class="card-front card-face" data-table-card-front>
+              <img src="images/B.svg" alt="Card" data-table-card-value />
+            </div>
+          </div>
+          <div class="card" data-table-card>
+            <div class="card-back card-face">
+              <img src="images/B.svg" alt="Card" />
+            </div>
+            <div class="card-front card-face" data-table-card-front>
+              <img src="images/B.svg" alt="Card" data-table-card-value />
+            </div>
+          </div>
+          <div class="card" data-table-card>
+            <div class="card-back card-face">
+              <img src="images/B.svg" alt="Card" />
+            </div>
+            <div class="card-front card-face" data-table-card-front>
+              <img src="images/B.svg" alt="Card" data-table-card-value />
+            </div>
+          </div>
+          <div class="card" data-table-card>
+            <div class="card-back card-face">
+              <img src="images/B.svg" alt="Card" />
+            </div>
+            <div class="card-front card-face" data-table-card-front>
+              <img src="images/B.svg" alt="Card" data-table-card-value />
+            </div>
+          </div>
+          <div class="card" data-table-card>
+            <div class="card-back card-face">
+              <img src="images/B.svg" alt="Card" />
+            </div>
+            <div class="card-front card-face" data-table-card-front>
+              <img src="images/B.svg" alt="Card" data-table-card-value />
+            </div>
+          </div>
+        </div>
+        <div class="player">
+          <div class="hand">
+            <div class="card" data-player-card>
+              <div class="card-back card-face">
+                <img src="images/B.svg" alt="Card" />
+              </div>
+              <div class="card-front card-face" data-player-card-front>
+                <img src="images/B.svg" alt="Card" data-player-card-value />
+              </div>
+            </div>
+            <div class="card" data-player-card>
+              <div class="card-back card-face">
+                <img src="images/B.svg" alt="Card" />
+              </div>
+              <div class="card-front card-face" data-player-card-front>
+                <img src="images/B.svg" alt="Card" data-player-card-value />
+              </div>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="counter">
+              <div class="stats-text-title">Wager</div>
+              <div class="stats-text-value" data-current-bet>$0</div>
+            </div>
+            <div class="counter">
+              <div class="stats-text-title">Wallet</div>
+              <div class="stats-text-value" data-current-chips>$150</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons-row">
+        <div><button data-next-button class="button">Play</button></div>
+        <div>
+          <button data-wager-button disabled class="button">Place Bet</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

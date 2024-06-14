@@ -1,9 +1,14 @@
-# texas-poker-one-player
+# texas-holdem
 
 Покер в стиле холдема с использованием стандартного JavaScript.
 Эта версия игры была модифицирована для одиночной игры.
 Скоро появится многопользовательская поддержка!
 
+<p align="left">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="45" width="45" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="45" width="45" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="45" width="45" />
+</p>
 
 В настоящее время игрок может играть в покер в Техасский Холдем в песочнице.
 Игра развивается как настоящая игра в стиле казино, но нет других игроков, о которых можно было бы беспокоиться.
